@@ -14,12 +14,12 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Optional;
 
-public class VerGatos {
-    public VerGatos() throws IOException {
+public class VerPerros {
+    public VerPerros() throws IOException {
         //postman
         OkHttpClient client = new OkHttpClient().newBuilder().build();
-        Request request = new Request.Builder().url("https://api.thecatapi.com/v1/images/search")
-                                                        .method("GET", null).build();
+        Request request = new Request.Builder().url("https://api.thedogapi.com/v1/images/search")
+                .method("GET", null).build();
         Response respuesta = client.newCall(request).execute();
 
         String elJson = respuesta.body().string();
@@ -72,7 +72,7 @@ public class VerGatos {
         //obciones menu ver
         switch (menuver) {
             case 0:
-                VerGatos ver = new VerGatos();
+                VerPerros ver = new VerPerros();
                 break;
             case 1:
                 MarcarFav fav = new MarcarFav();
