@@ -11,7 +11,7 @@ public class Menu {
         logo = new ImageIcon(new URL("https://cdn2.thecatapi.com/images/dgh.jpg"));
 
 
-        int menu = (int) JOptionPane.showOptionDialog(null, "                                 " +
+        int menu = (int) JOptionPane.showOptionDialog(null, "                                                      " +
                         "Selecciona una opcion", "Ver imagenes de Gatos ", 0,
                 JOptionPane.QUESTION_MESSAGE, logo, botones, botones);
 
@@ -19,7 +19,7 @@ public class Menu {
             case 0:
                 VerGatos ver = new VerGatos();
                 break;
-            case 1:
+            case 1: VerFavoritosClass verfavoritos = new VerFavoritosClass();
                 break;
             case 2: VerPerros verperros = new VerPerros();
 
