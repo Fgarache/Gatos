@@ -53,7 +53,7 @@ public class VerPerros {
         ImageIcon imageIcon = new ImageIcon(imagen);
 
         //redimencionar imagen
-        if (imageIcon.getIconWidth() > 1200) {
+        if (imageIcon.getIconWidth() > 800) {
 
             Image fondo = imageIcon.getImage();
             Image modificada = ((java.awt.Image) fondo).getScaledInstance(800, 600, Image.SCALE_SMOOTH);
@@ -75,7 +75,8 @@ public class VerPerros {
                 VerPerros ver = new VerPerros();
                 break;
             case 1:
-                MarcarFav fav = new MarcarFav();
+                MarcarFav fav = new MarcarFav(gatoVar);
+                System.out.println("marcar favoritos");
                 break;
             case 2:
                 Menu menu = new Menu();
